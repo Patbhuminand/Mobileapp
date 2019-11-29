@@ -22,7 +22,6 @@ export default class MyProfile1 extends React.Component {
   onPressUpdatePassword = () => {
     if(this.state.newPassword == this.state.renewPassword)
     {
-      database.updatePasswordAut(this.state.newPassword);
       database.readOnce('Patbhuminand.s@ku.th',this.read_Account_success,this.read_Account_fail)
     }
     else {
@@ -33,6 +32,7 @@ export default class MyProfile1 extends React.Component {
   read_Account_success=async(account)=>{
     if(this.state.oldPassword == account.password)
     {
+      database.updatePasswordAut(this.state.newPassword);
       database.updatePassword(account,this.state.newPassword,this.update_Account_success,this.update_Account_fail)
     }
     else {
