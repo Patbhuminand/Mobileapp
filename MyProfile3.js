@@ -18,7 +18,7 @@ export default class MyProfile3 extends React.Component {
   }
 
   onPressUpdateLastname = () => {
-    database.readOnce('Good@gmail.com',this.read_Account_success,this.read_Account_fail)
+    database.readOnce('Patbhuminand.s@ku.th',this.read_Account_success,this.read_Account_fail)
     }
 
     read_Account_success=async(account)=>{
@@ -31,6 +31,7 @@ export default class MyProfile3 extends React.Component {
 
     update_Account_success=async(id)=>{
       Alert.alert("Change lastname success");
+      this.props.navigation.navigate("MyProfile");
     }
 
     update_Account_fail=async()=>{
