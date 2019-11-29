@@ -14,7 +14,9 @@ import MyProfile from './components/MyProfile/MyProfile';
 import MyProfile1 from './components/MyProfile/MyProfile1';
 import MyProfile2 from './components/MyProfile/MyProfile2';
 import MyProfile3 from './components/MyProfile/MyProfile3';
+--------------------------------;
 import Camerasnap from './components/MyProfile/Camera';
+
 import fgp from './components/Auth/fgp';
 
 const AuthStack = createStackNavigator({
@@ -86,6 +88,8 @@ const MyProfileStack = createStackNavigator({
       },
     })
   },
+                                          
+                                          --------------------------------;
 
   Camerasnap: {
     screen: Camerasnap,
